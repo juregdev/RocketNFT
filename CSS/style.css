@@ -43,6 +43,7 @@ header{
   top: 3.5rem;
 }
 
+
 .menu nav{
   display: flex;
   gap: 3.75rem;
@@ -65,7 +66,7 @@ header{
   border-bottom: 2px solid var(--color-logo);
 }
 
-#button button{
+#button button, #buttonMobile button{
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -73,6 +74,78 @@ header{
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
+}
+
+#logo img{position: relative;
+z-index: 2;}
+
+#burger{position: fixed;
+top: 2rem;
+right: 10%;
+display: flex;
+flex-direction: column;
+gap: 0.2rem;
+z-index: 2;
+}
+
+#line1, #line2, #line3{
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: var(--color-logo);
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+#line1{transform: rotate(-45deg);
+
+
+}
+
+#line3{transform: rotate(45deg);
+ 
+  }
+
+@media screen and (max-width:900px) {
+  .menu, #button{display: none;}
+  #logo img{position: fixed;
+  left: 2rem;
+  top: 2rem;
+  }
+  
+}
+
+.contMenuMobile{
+  background: var(--body-background);
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  top: 0;
+  display: block;
+  position: absolute;
+  transform: translateX(150%);
+  transition: transform 1s ease-in-out;
+}
+
+.menuMobile nav{
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 30%;
+
+}
+
+.menuMobile nav a{
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--text-color);
+  padding-bottom: 0.5rem;
+  box-sizing: border-box;
+  transition: all .5s ease-in-out;
 }
 
 .conteinerTop{
@@ -404,12 +477,14 @@ margin: 5% auto;
   display: flex;
   width: 100%;
   margin:1rem auto ;
+  
 }
 
 
 #astro01 div h2, #astro02 div h2 ,#astro03 div h2 ,#astro04 div h2 ,#astro05 div h2,#astro06 div h2{
   font-size: 30px;
   width:30% ;
+  white-space: nowrap;
   margin: 0 6rem 0 0;}
 
 #astro01 div p, #astro02 div p, #astro03 div p, #astro04 div p, #astro05 div p, #astro06 div p{
@@ -438,7 +513,18 @@ margin: 5% auto;
 #divAstro, #divAstro2{
   width: 100%;
 }
+
+
+#astro01 div, #astro02 div ,#astro04 div ,#astro05 div{padding-left: 1rem;}
+
 #astro01  img#imgAstro ,#astro02  img#imgAstro , #astro03  img#imgAstro, #astro04  img#imgAstro, #astro05  img#imgAstro, #astro06  img#imgAstro{width: 100%;}
+}
+
+@media screen and (max-width:400px){
+  #astro01 div p, #astro02 div p, #astro03 div p, #astro04 div p, #astro05 div p, #astro06 div p{font-size: 12px;}
+
+  #astro01 div h2, #astro02 div h2 ,#astro03 div h2 ,#astro04 div h2 ,#astro05 div h2,#astro06 div h2{font-size: 18px;}
+
 
 }
 
@@ -593,6 +679,16 @@ margin: 5% auto;
     height: 70vh;
   }
 
+  @media screen and (max-width:700px) {
+    footer{
+      position: relative;
+      top: 110%;
+      display: block;
+      height: 100%;
+    }
+    
+  }
+
   #logoFooter{
     display: flex;
     width: 100%;
@@ -605,6 +701,7 @@ margin: 5% auto;
     border-right: 1px solid var(--subtitle-color) ;
     border-bottom: 1px solid var(--subtitle-color) ;
     height: 100%;
+    
     width: 100%;
     grid-area: centerLeft;
     align-items: center;
@@ -632,6 +729,8 @@ margin: 5% auto;
   width: 60%;
   height: 7vh;
   background: var(--color-input);
+  color: var(--text-color);
+  padding-left: 2rem;
   border: none;
   border-radius: none;
   box-sizing: border-box;  
@@ -652,12 +751,11 @@ margin: 5% auto;
 
 .input button{
   width: 20%;
-  height: 6.5vh;
+  height: 6.8vh;
   border: none;
   border-radius: none;
   position: relative;
-  right: 16px;
-  top: 2px;
+  top: 1px;
   margin: 0 auto 0 0;
   font-size: 20px;
   font-weight: bold;
@@ -732,3 +830,56 @@ margin: 5% auto;
   width: 100%;
 }
 
+
+@media screen and (max-width:700px) {
+  #logoFooter, .institu{height: 25%;}
+  .input{height: 30%;
+  width: 100%;
+  }
+  .socialMedia{height: 15%;}
+
+  #logoFooter, .institu,.input{border: none;
+    border-bottom: 1px solid var(--subtitle-color);
+  }
+
+  .input div{width:90%;}
+
+  .institu{padding: 3% 0;
+  }
+}
+@media screen and (max-width:1000px){
+ footer{ grid-template-columns: 50%;}
+ .input div button{font-size: 18px;}
+ .input div input::placeholder{font-size: 16px;}
+}
+
+
+@media screen and (max-width:500px){
+#logoFooter img{
+  position: relative;
+  left: 1rem;
+  width: 60%;}
+
+#topArrow{position: relative;
+right: 1rem;
+}
+
+#topArrow img{left: 0;
+top: 0.5rem;}
+
+.input h1{font-size: 25px;}
+.input div{width: 100%;}
+.input div input{width: 80%;}
+.input div button{
+  width: 20%;
+  font-size: 14px;
+}
+.input div input::placeholder{font-size: 14px;}
+ 
+.institu ul li {font-size: 14px;}
+
+.socialMedia{
+  flex-direction: column;
+  font-size: 14px;}
+
+}
