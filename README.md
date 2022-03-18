@@ -13,7 +13,7 @@ O Rocket NFT é um desafio proposto pela @Rocketseat onde o intuito é criar uma
 ### Design
 [![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/file/VDRCPVEywzdweh8BGnu0M5/Rocket-NFTs/duplicate)
 
-##ScreenShots
+## ScreenShots
 
 ### Desktop
 
