@@ -112,7 +112,9 @@ z-index: 2;
   left: 2rem;
   top: 2rem;
   }
-  
+}
+@media screen and (min-width:900px){
+  #burger, .contMenuMobile{display: none;}
 }
 
 .contMenuMobile{
