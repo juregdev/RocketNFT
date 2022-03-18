@@ -372,6 +372,7 @@ height: 80%;}
 
 .dataLeft{width: 80%;
 border-right: 1px solid var(--card-color);
+border-bottom: 1px solid var(--card-color);
 height: 100%;
 display: flex;
 flex-direction: column;
