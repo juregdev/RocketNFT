@@ -25,3 +25,12 @@ const dropMenu = (element)=>{
 }
 
 }
+
+if(screen.width <=1300){
+
+
+document.querySelector('#astro02 div h2').textContent = "Astronauta 2"
+document.querySelector('#astro04 div h2').textContent = "Astronauta 3"
+
+
+}
